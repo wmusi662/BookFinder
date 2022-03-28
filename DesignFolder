@@ -1,0 +1,310 @@
+.
+********************************************
+https://documentcss.com/
+************************************************
+Styles on base-level tags should live here, including table and form styles. 
+Styles for specific elements or helper classes should go in their separate,
+ respective, files. Typography is housed in its own typography file due to 
+the typical complexity. Global styles, or styles on the body/html should live here.
+****************************************
+forms
+**************************************
+<form>
+	<label for="text-input">Text Input</label>
+	<input type="text" name="text-input" placeholder="placeholder">
+
+	<label for="option">Options</label>
+	<select>
+		<option>Option 1</option>
+		<option>Option 2</option>
+		<option>Option 3</option>
+	</select>
+
+	<label for="text-area">Text Area</label>
+	<textarea name="text-area">Placeholder</textarea>
+
+	<button type="submit">Submit</button>
+</form>
+****************************************
+table
+************************************
+<table>
+	<tbody><tr>
+		<th>Column Heading</th>
+		<th>Column Heading</th>
+		<th>Column Heading</th>
+	</tr>
+	<tr>
+		<td>Content</td>
+		<td>Content</td>
+		<td>Content</td>
+	</tr>
+	<tr>
+		<td>Content</td>
+		<td>Content</td>
+		<td>Content</td>
+	</tr>
+	<tr>
+		<td> </td>
+		<td> </td>
+		<td> </td>
+	</tr>
+</tbody></table>
+******************************************************
+Layout classes are used to structure the main parts of a page.
+*****************************************************
+Title Section
+********************************************
+Styles the title section that shows as the top of each document. 
+It is composed by a .heading, tags, a subheading, and a list of links.
+**********************
+<div class="docs">
+  <section class="title">
+
+    <div class="heading">
+      <h1>Header</h1>
+      <ul class="tags">
+        <li>Tags</li>
+      </ul>
+      <br>
+    </div>
+
+    <div class="sub-heading">
+      <span class="module">Subheading-module</span>
+      <span class="inherits">
+        inherits: 
+        <a href="#">sample.text</a>
+      </span>
+    </div>
+
+    <ul class="links">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    <br>
+  </section>
+</div>
+********************************************
+Styles the sidebar navigation.
+Cascading List
+************************************* 
+<nav class="sidebar">
+  <ul class="api cascading primary-grouping"> 
+    <li class="search-container active parent">
+      <a class="sidebar-title" href="#">Level 1</a>
+    </li>
+    <li class="search-container active parent">
+      <a class="sidebar-title" href="#">Level 2</a>
+    </li>
+    <li class="search-container active parent">
+      <a class="sidebar-title" href="#">Level 3</a>
+    </li>
+    <li class="search-container active parent">
+      <a class="sidebar-title" href="#">Level 4</a>
+    </li>
+    <li class="search-container active parent">
+      <a class="sidebar-title" href="#">Level 5</a>
+    </li>
+  </ul>
+</nav>
+************************************************************
+List Items
+Styles the groups of lists shown on the sidebar.
+<nav class="sidebar">
+  <ul class="api primary-grouping"> 
+    <li class="search-container active">
+      <ul>
+        <li class="heading search-container">
+          <span>Group Name</span>       
+      <ul>
+    <li class="active">
+      <a class="page" href="#">List item</a>
+    </li>
+    <li>
+      <a class="page" href="#">List item</a>
+    </li>
+    <li>
+      <a class="page" href="#">List item</a>
+    </li>
+    <li>
+      <a class="page" href="#">List item</a>
+    </li>
+  </ul>
+</li></ul></li></ul></nav>
+********************************************* 
+Versions
+Select menu used to display the documentation
+********************************************
+<nav class="sidebar">
+  <ul class="api"> 
+    <li class=" active">
+      <a class="sidebar-title" href="#">
+        Title
+      </a>
+      <select id="versions">
+        <option value="0.1">0.1</option>
+        <option value="0.2" selected="">0.2</option>
+      </select>
+    </li>
+  </ul>
+********************************************************* 
+///////////Header///////
+
+The header holds menus for this app, 
+other Bitovi Open-Source products, 
+and other Bitovi related links. 
+At 768px, it collapses to a mobile-style view, 
+putting the main menu under a "Menu" button and 
+removing the menu under the logo altogether.
+************************************************************ 
+<header>
+  <nav class="container" style="width: inherit;">
+    <div class="logo-menu">
+      <a class="brand" href="#">DocumentJS</a>
+    </div>
+  </nav>
+</header>
+********************************************************
+Bitovi Menu
+This dropdown menu shows when hovering the Bitovi bits icon. 
+Links placed on this menu link out the external Bitovi sites.
+*************************************************** 
+<header>
+  <nav class="container" style="width: inherit;">
+    <div class="pull-right">
+      <div class="bitovi-menu">
+        <a href="#" class="bitovi icon-bits">Bitovi</a>
+        <ul class="dropdown-menu" style="display: block; visibility: visible;">
+          <li><a href="#">Bitovi.com</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Consulting</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Open Source</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+******************************************************************** 
+Header Dropdown Menu
+This dropdown shows when hovering the logo.
+********************************************************** 
+<header>
+  <nav class="container" style="width: inherit;">
+    <ul class="dropdown-menu" style="display: block; visibility: visible;">
+      <li><a href="#">JavaScriptMVC</a></li>
+      <li><a href="#">CanJS</a></li>
+      <li><a href="#">jQuery++</a></li>
+      <li><a href="#">StealJS</a></li>
+      <li><a href="#">FuncUnit</a></li>
+      <li><a href="#" class="active">DocumentJS</a></li>
+    </ul>
+  </nav>
+</header>
+**************************************************************** 
+Header Nav
+******************************************************* 
+<div class="demo_wrapper" data-demo-src=""></div>
+<header>
+  
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+
+
+
+	  <nav class="container" style="width: inherit;">
+    <ul class="nav">
+      <li><a href="../index.html">Home</a></li>
+      <li class="active"><a href="/docs/index.html">Api</a></li>
+      <li><a href="/styles/index.html">Styles</a></li>
+      <li><a href="https://twitter.com/documentjs">Twitter</a></li>
+      <li><a href="https://github.com/bitovi/documentjs">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+***************************************************************** 
+Buttons
+
+All defined button styles and states belong here, 
+including any "helper class" button style options, like default,
+ primary etc. DocumentJS only has one defined button,
+ which does not need any additional classes.
+The same button styles have been applied to a button class,
+for use on other html elements emulating a button.
+**************************************************************** 
+<h3>Default Button</h3>
+<button>button</button>
+<hr>
+<h3>Active Button</h3>
+<button class="active">button</button>
+(which matches the hover state.)
+<hr>
+<h3>"Button" class applied to a div</h3>
+<div class="button">"button"</div>
+********************************************************* 
+Code Rendering
+Enables both the layout of code wells, and also the syntax
+ highlighting of the specific code language. 
+Syntax coloring provided by prettify.js with the Tomorrow Theme.
+Code "wells" are styled based on the use of the <pre> and <code> tags 
+around your desired code example.
+Below are a few examples in various languages. 
+This is not an exhaustive list of supported languages.
+******************************************************** 
+pre>
+   <code>
+     <div class="example"><!--with a comment -->
+       <h1>Example</h1>
+       <p>This is some example code that is being styled.</p>
+     </div>
+   </code>
+ </pre>
+JavaScript
+var foo = require('f'),
+    bar = require('br'),
+    writeFile = f.denodify(br.writeFile),
+    path = require('path');
+    
+module.exports = function(littlePromise, options){
+   return littlePromise.then(function(little){
+     return writeFile(
+         path.join(options.dest,'little.json'), 
+         JSON.stringify(little) );
+   });
+};
+JSON
+{
+  "sites": {
+    "docs": {
+      "key" : "value"
+    }
+  }
+}
+
+*********************************************** 
+Docs Warning
+DemoHTML
+<div class="docs">
+  <section class="warnings">
+      <div class="deprecated warning">
+        <h3>Warning message</h3>
+        <div class="signature-wrapper">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Maecenas lobortis metus sed risus pretium, at finibus libero bibendum.
+          </p>
+        </div>
+      </div>
+  </section>
+</div>
+****************************************************************
+
+
+
+
+
+
